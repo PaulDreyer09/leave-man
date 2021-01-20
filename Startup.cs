@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using leave_man.Contracts;
 using leave_man.Repository;
+using leave_man.Mappings;
 using AutoMapper;
 
 namespace leave_man
@@ -39,7 +40,15 @@ namespace leave_man
             services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
             services.AddScoped<ILeaveHistoryRepository, LeaveHistoryRepository>();
 
-            services.AddAutoMapper(typeof(Mapper));
+
+            //Setup for Automapper profile
+            var mapperconfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new Maps());
+            });
+            IMapper mapper = mapperconfig.CreateMapper();
+            services.AddSingleton(mapper);
+            //services.AddAutoMapper(typeof(Mapper));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
