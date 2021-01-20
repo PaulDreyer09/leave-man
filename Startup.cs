@@ -42,13 +42,14 @@ namespace leave_man
 
 
             //Setup for Automapper profile
-            var mapperconfig = new MapperConfiguration(mc =>
+           /* var mapperconfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new Maps());
             });
             IMapper mapper = mapperconfig.CreateMapper();
-            services.AddSingleton(mapper);
-            //services.AddAutoMapper(typeof(Mapper));
+            services.AddSingleton(mapper);*/
+
+            services.AddAutoMapper(typeof(Mapper));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
