@@ -27,6 +27,11 @@ namespace leave_man.Repository
             return Save();
         }
 
+        public bool Exists(int id)
+        {
+            return _db.LeaveAllocations.Any(q => q.Id == id);
+        }
+
         public ICollection<LeaveAllocation> FindAll()
         {
             var leaveAllocations = _db.LeaveAllocations.ToList();

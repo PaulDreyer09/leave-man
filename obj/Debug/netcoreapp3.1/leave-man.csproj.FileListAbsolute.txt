@@ -157,3 +157,6 @@ C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\leave-man
 C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\leave-man.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Index.cshtml.g.cs
 C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Create.cshtml.g.cs
+C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Edit.cshtml.g.cs
+C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Details.cshtml.g.cs
+C:\Users\Paul\source\repos\leave-man\leave-man\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Delete.cshtml.g.cs
